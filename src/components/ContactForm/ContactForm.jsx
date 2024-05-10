@@ -14,8 +14,8 @@ export default function ContactForm({ onAddContact }) {
     name: Yup.string()
       .min(3, "Too Short!")
       .max(50, "Too Long!")
-      .required("Required field*"),
-    number: Yup.string().min(8, "Too Short!").required("Required field*"),
+      .required("Required field"),
+    number: Yup.string().min(8, "Too Short!").required("Required field"),
   });
 
   // ======================= HANDLE SUBMIT
@@ -38,7 +38,7 @@ export default function ContactForm({ onAddContact }) {
       <Form className={css.form}>
         <div className={css["inputs-container"]}>
           <div className={css["form-input-box"]}>
-            <label htmlFor={nameId}>Name</label>
+            <label htmlFor={nameId}>Name*</label>
             <Field className={css.input} id={nameId} name="name" />
             <ErrorMessage
               className={css["error-message"]}
@@ -47,7 +47,7 @@ export default function ContactForm({ onAddContact }) {
             />
           </div>
           <div className={css["form-input-box"]}>
-            <label htmlFor={numberId}>Number</label>
+            <label htmlFor={numberId}>Number*</label>
             <Field className={css.input} id={numberId} name="number" />
             <ErrorMessage
               className={css["error-message"]}
