@@ -1,0 +1,57 @@
+.contact-item {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+    padding: 1.5rem;
+    background-color: #d8f5fd;
+    border: 1px solid ;
+    border-radius: 20px;
+}
+
+.name-text,
+.number-text {
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 700px) {
+
+    .name-text,
+    .number-text {
+        font-size: 1rem;
+    }
+}
+
+.delete-button {
+    align-self: center;
+    padding: 1rem;
+    border: 0;
+    background-color: #ee959b;
+    cursor: pointer;
+    transition: background-color 250ms linear;
+}
+
+.delete-button:hover,
+.delete-button:focus {
+    background-color: #fd0638;
+}
+
+.item-icon-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-person-icon,
+.contact-phone-icon {
+    color: #1373a2;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
